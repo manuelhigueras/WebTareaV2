@@ -1,0 +1,155 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-dic-2020, 19:36:30
+    Author     : Manuel
+*/
+
+body{
+    /*text-align: center;*/
+    background-image: url("https://besthqwallpapers.com/img/original/106338/vertical-wooden-boards-4k-wooden-carving-background-brown-wooden-texture-wooden-backgrounds.jpg");
+    /*("C:\Users\Manuel\Documents\NetBeansProjects\0012_Db_Bank_html\public_html\img\Fondo.jpg")*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bg-grays{
+    background-color: #e9ecef;
+}
+
+.bodyTam{
+    width: 50%;
+}
+
+.bg-ToDo{
+    background-color: #ea240f;
+}
+
+.bg-InProgress{
+    background-color: #eadc0f;
+}
+
+.bg-Done{
+    background-color: #35ea0f;
+}
+
+.bg-fonds{
+    background-color: #FF6347;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+   text-decoration: none;
+}
+
+#cabecera {
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.container-fluidSpecialV1 {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;	    
+}
+
+#pie {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    /*border-bottom: 2px solid #999999;*/
+    border-top: 1px solid #999999;
+}
+
+.border {
+    border-radius: 5px;
+}
+
+.espaciado {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.espaciadoHor {
+    padding-bottom: 15px;
+}
+
+.espaciadoLateral {
+    padding-left: 15px;
+}
+
+.espaciadoEspecifico {
+    margin-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 15px;
+    border-top-style: solid;
+    border-top-width: 0px;
+}
+
+.espaciadoSpecial {
+    padding-bottom: 15px;
+    margin: 5px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;	
+}
+
+.image {
+    width:100px;
+}
+
+.seccion {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #343a40;
+    border-radius: 5px;
+}
+
+.divBlock{
+    padding-top: 15px;
+}
+
+.pie {
+    background-color: #343a40;
+    height: 75px;
+    color: gray;
+    padding-top: 25px;
+    border-radius: 5px;
+    clear: both;
+    text-align: center;
+    /*padding: 20px;*/
+    /*border-top: 1px solid #343a40;*/
+}
+
+.container-fluidSpecialDer {
+    padding-top: 5px;
+    display: inline;
+    float: right;    
+}
+
+.container-fluidSpecialInline {
+    padding-top: 5px;
+    display: inline-block;
+    justify-content: center;	
+    position:relative;
+}
+
+.mensajeDivAuth{
+    position: absolute;
+    top: 50%; /* Buscamos el centro horizontal (relativo) del navegador */
+    left: 50%; /* Buscamos el centro vertical (relativo) del navegador */
+    width: 600px; /* Definimos el ancho del objeto a centrar */
+    height: 400px; /* Definimos el alto del objeto a centrar */
+    margin-top: -200px; /* Restamos la mitad de la altura del objeto con un margin-top */
+    margin-left: -300px; /* Restamos la mitad de la anchura del objeto con un margin-left */
+}

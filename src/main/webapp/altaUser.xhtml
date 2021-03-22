@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/view/plantillaAltaLogin.xhtml">
+
+            <ui:define name="titulo">
+                Alta Usuario
+            </ui:define>
+
+            <ui:define name="top">
+                <div class="container p-3 my-3 container-fluid">
+                    <h:form class="needs-validation">
+                        <p:panel id="panel" header="Alta user">
+                            <div class="form-group">
+                              <label class="text-secondary" for="email">Email:</label>
+                              <p:inputText type="text" value="#{usuario.usuarioEncontrado.email}" class="form-control" id="email" placeholder="Introduce un correo"/>
+                            </div>
+                            <div class="form-group">
+                              <label for="username" class="text-secondary">Username:</label>
+                              <p:inputText type="text" value="#{usuario.usuarioEncontrado.nombre}" class="form-control" id="username" placeholder="Introduce un usuario"/>
+                            </div>
+                            <div class="form-group">
+                              <label for="password" class="text-secondary">Password:</label>
+                              <p:password class="form-control" value="#{usuario.usuarioEncontrado.password}" id="pwd" placeholder="Introduce una contraseña"/>
+                            </div>                  
+                            <div class="form-group">
+                              <label for="nombre" class="text-secondary">Nombre:</label>
+                              <p:inputText type="text" value="#{usuario.usuarioEncontrado.nombre}" class="form-control" id="nombre" placeholder="Introduce un nombre"/>
+                            </div>                 
+                            <div class="container-fluid">
+                                <p:commandButton value="Crear usuario" action="#{usuario.CrearUsuario}"/>
+                            </div>           
+                        </p:panel>
+                    </h:form>
+                </div>
+            </ui:define>
+
+            <ui:define name="content">
+                content
+            </ui:define>
+
+            <ui:define name="bottom">
+                bottom
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

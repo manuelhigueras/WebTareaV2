@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <!--Idioma de Pag<f:view locale="{idiomaMB.idioma}">-->
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <!--Link del icono<link rel="icon" type="image/png" sizes="32x32" href="resources/img/favicon-32x32.png"/>-->
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>        
+        <h:outputStylesheet library="css" name="default.css"/>
+        <h:outputStylesheet library="css" name="cssLayout.css"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <title><ui:insert name="titulo">titulo</ui:insert></title>
+    </h:head>
+
+    <h:body>
+
+        <div class="container p-3 my-3">
+            <header class="jumbotron container-fluid text-body">
+                <h3>#{textos.app_titulo}</h3>
+            </header>
+            <nav class="navbar navbar-expand-sm justify-content-center espaciado">
+                <ul class="nav">
+                    <li class="btn nav-item text-white bg-dark">
+                        <h:panelGroup rendered="#{ gestionUsuariosMB.usuarioEncontrado.email == null }">                
+                            <div>
+                                <h:form id="formLog">
+                                    <h:commandLink value="login" action="login" />
+                                </h:form>   
+                            </div>
+                        </h:panelGroup>
+                    </li>
+                    
+                    <h:panelGroup rendered="#{ gestionUsuariosMB.usuarioEncontrado.email != null }">       
+                            <li class="btn nav-item text-white bg-dark">
+                            <h:form id="formLogOut">
+                                <div>
+                                    <h5>Bievenido #{gestionUsuariosMB.usuarioEncontrado.email}</h5>
+                                    <p:commandLink value="logout" action="#{gestionUsuariosMB.logout()}" />
+                                </div>                 
+                            </h:form>   
+                            </li>    
+                        </h:panelGroup>
+                    
+                    <li class="btn nav-item text-white bg-dark">
+                        <h:form id="formIdioma">
+                            <h:commandLink value="es" action="#{idiomaMB.cambiarIdioma('es')}" />
+                        </h:form>
+                    </li>
+                    <li class="btn nav-item text-white bg-dark">
+                        <h:form id="formIdioma2">
+                            <h:commandLink value="en" action="#{idiomaMB.cambiarIdioma('en')}" />
+                        </h:form>
+                    </li>                       
+                </ul>
+            </nav>
+        </div>
+        <div id="content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">Bottom</ui:insert>
+        </div>
+
+    </h:body>
+    <!--Final de idioma de pag</f:view>-->    
+</html>
